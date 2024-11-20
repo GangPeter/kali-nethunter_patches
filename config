@@ -21,25 +21,25 @@ export CLANG_PATH=${CLANG_ROOT}/bin
 export PATH=${CLANG_PATH}:${PATH}
 export LD_LIBRARY_PATH=${CLANG_ROOT}/lib64:$LD_LIBRARY_PATH
 export CLANG_TRIPLE=aarch64-linux-gnu-
-## "CC=clang" cannot be exported - we'll pass it to make in the function make_kernel if "CC" is set to "clang" 
+# "CC=clang" cannot be exported - we'll pass it to make in the function make_kernel if "CC" is set to "clang"
 CC=clang
-## Source repository:
+# Source repository
 CLANG_SRC="https://kali.download/nethunter-images/toolchains/google_clang-10.0.4.tar.xz"
 CLANG_SRC_TYPE="wget"
 
 # GCC 64bit
-## arm64 cross compiler directory:
+# arm64 cross compiler directory
 CCD64="${TD}/aarch64-4.9"
 export CROSS_COMPILE=${CCD64}/bin/aarch64-linux-android-
-## Source repository:
+# Source repository
 CROSS_COMPILE_SRC="https://kali.download/nethunter-images/toolchains/google_aarch64-4.9.tar.xz"
 CROSS_COMPILE_SRC_TYPE="wget"
 
 # GCC 32bit
-## armhf cross compiler directory:
+# armhf cross compiler directory
 CCD32="${TD}/armhf-4.9"
 export CROSS_COMPILE_ARM32=${CCD32}/bin/arm-linux-androideabi-
-## Source repository:
+# Source repository
 CROSS_COMPILE_ARM32_SRC="https://kali.download/nethunter-images/toolchains/google_armhf-4.9.tar.xz"
 CROSS_COMPILE_ARM32_TYPE="wget"
 
@@ -57,7 +57,7 @@ KDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." >/dev/null 2>&1 && pwd )"
 # build config
 CONFIG=nethunter_defconfig
 
-# Copy "SRC_VERSION" to  "TARGET_VERSION" if kernel makefile expects it
+# Copy "SRC_VERSION" to "TARGET_VERSION" if kernel makefile expects it
 SRC_VERSION=
 TARGET_VERSION=
 
@@ -78,7 +78,7 @@ ANY_ARCHIVE="anykernel$LOCALVERSION.zip"
 # GZ Image (Uncomment to Enable)
 IMAGE_NAME=Image.gz-dtb
 # lz4 image (Uncomment to Enable)
-### IMAGE_NAME=Image.lz4-dtb
+#IMAGE_NAME=Image.lz4-dtb
 
 # Set to "true" to enable dtbo
 DO_DTBO=false
