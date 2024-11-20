@@ -104,7 +104,9 @@ ANYKERNEL_DIR=$BUILD_DIR/anykernel3
 # DTBTool
 DTBTOOL=$BUILD_DIR/tools/dtbToolCM
 
-# Name of the dtb output image (must be dtb.img when used with nethunter boot-patcher)
+# Name of the dtb output image
+#   Must be dtb.img when used with NetHunter's installer (boot-patcher)
+#   https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-installer/-/tree/main/boot-patcher
 DTB_IMG=dtb.img
 
 # Input DTB path
