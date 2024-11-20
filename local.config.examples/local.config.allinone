@@ -28,6 +28,13 @@ export SUBARCH=arm64
 #unset CC
 #unset CLANG_SRC
 
+## Comment this section if your device is older
+### Recommended clang compiler
+CLANG_SRC="https://kali.download/nethunter-images/toolchains/google_clang-10.0.4.tar.xz"
+CLANG_SRC_TYPE="wget"
+# And it's path
+export CLANG_ROOT=${TD}/clang-10.0
+
 ### Recommended arm compiler
 # GCC 32bit (arm) source
 CROSS_COMPILE_ARM32_SRC="https://kali.download/nethunter-images/toolchains/linaro-armhf-4.9.tar.xz"
@@ -43,12 +50,6 @@ CROSS_COMPILE_TYPE="wget"
 # And it's path
 CCD64="${TD}/linaro-aarch64-5.5"
 export CROSS_COMPILE=${CCD64}/bin/aarch64-linux-gnu-
-
-### Recommended clang compiler
-CLANG_SRC="https://kali.download/nethunter-images/toolchains/google_clang-10.0.4.tar.xz"
-CLANG_SRC_TYPE="wget"
-# And it's path
-export CLANG_ROOT=${TD}/clang-10.0
 
 # Additional compiler arguments
 MAKE_ARGS=""
