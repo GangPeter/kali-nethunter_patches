@@ -148,5 +148,5 @@ MAKE_ARGS=""
 LOCAL_CONFIG=local.config
 
 if [ -f ${BUILD_DIR}/$LOCAL_CONFIG ]; then
-        source ${BUILD_DIR}/$LOCAL_CONFIG
+  source ${BUILD_DIR}/$LOCAL_CONFIG
 fi
