@@ -68,10 +68,10 @@ MODULE_DIRTREE="modules/system_root/"
 # All Available cores (Used for normal compilation)
 THREADS="$(grep -c ^processor /proc/cpuinfo)"
 
-# NetHunter Kernel zip name
+# NetHunter kernel zip name
 NH_ARCHIVE="nethunter-kernel$LOCALVERSION.zip"
 
-# Anykernel zip name
+# AnyKernel zip name
 ANY_ARCHIVE="anykernel$LOCALVERSION.zip"
 
 # Image Type (Only ONE of the following (lz4/gz) can be enabled!)
@@ -98,7 +98,7 @@ KERNEL_IMAGE=$BUILD_DIR/out/arch/arm64/boot/$IMAGE_NAME
 # NetHunter kernel zip directory
 NHKERNEL_DIR=$BUILD_DIR/nethunter
 
-# Anykernel zip directory
+# AnyKernel zip directory
 ANYKERNEL_DIR=$BUILD_DIR/anykernel3
 
 # DTBTool
@@ -118,13 +118,13 @@ DTBO_IMAGE=$BUILD_DIR/out/arch/arm64/boot/dtbo.img
 # Location to build the kernel
 KERNEL_OUT="$BUILD_DIR/out"
 
-# Destination patch for Changelog
+# Destination patch for the changelog
 CHANGELOG=$ANYKERNEL_DIR/Changelog.txt
 
-# Destination Path for compiled modules
+# Destination path for compiled modules
 MODULES_OUT=$BUILD_DIR/modules_out
 
-# Source Path for module tree to be copied to into nethunter zip
+# Source path for module tree to be copied to into NetHunter zip
 MODULES_IN=$BUILD_DIR/modules_out/lib
 
 # Destination Path for uploading kernel zip
